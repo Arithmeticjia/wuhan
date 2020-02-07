@@ -1,0 +1,4 @@
+Django==2.1.7
+requests==2.22.0
+selenium==3.11.0
+beautifulsoup4==4.8.2
