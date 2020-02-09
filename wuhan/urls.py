@@ -20,5 +20,6 @@ from wuhanmap import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('china-wuhan/', views.china_wuhan),
+    path('china-wuhan-static/', views.china_wuhan_static),
     path('china-wuhan/virusdata', views.china_wuhan_virus),
 ]

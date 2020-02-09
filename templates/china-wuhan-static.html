@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <script src="/static/china/dist/echarts.js"></script>
-    <script src="/static/china/map/js/china.js"></script>
+    <script src="/static/china/map/js/china-en.js"></script>
     <script src="/static/js/jquery.js"></script>
     <!-- include jQuery -->
     <script src="/static/js/jquery.main.js"></script>
@@ -114,79 +114,42 @@
     <div id="main">
     </div>
     <script type="text/javascript">
-        var dataList=[
-            {name:"南海诸岛",value: virus(0)},
-            {name: '北京', value: virus(228)},
-            {name: '天津', value: virus(66)},
-            {name: '上海', value: virus(219)},
-            {name: '重庆', value: virus(344)},
-            {name: '河北', value: virus(126)},
-            {name: '河南', value: virus(675)},
-            {name: '云南', value: virus(119)},
-            {name: '辽宁', value: virus(77)},
-            {name: '黑龙江', value: virus(155)},
-            {name: '湖南', value: virus(593)},
-            {name: '安徽', value: virus(480)},
-            {name: '山东', value: virus(275)},
-            {name: '新疆', value: virus(29)},
-            {name: '江苏', value: virus(308)},
-            {name: '浙江', value: virus(829)},
-            {name: '江西', value: virus(476)},
-            {name: '湖北', value: virus(13522)},
-            {name: '广西', value: virus(139)},
-            {name: '甘肃', value: virus(55)},
-            {name: '山西', value: virus(74)},
-            {name: '内蒙古', value: virus(35)},
-            {name: '陕西', value: virus(142)},
-            {name: '吉林', value: virus(42)},
-            {name: '福建', value: virus(194)},
-            {name: '贵州', value: virus(56)},
-            {name: '广东', value: virus(32)},
-            {name: '青海', value: virus(15)},
-            {name: '西藏', value: virus(1)},
-            {name: '四川', value: virus(282)},
-            {name: '宁夏', value: virus(34)},
-            {name: '海南', value: virus(80)},
-            {name: '台湾', value: virus(10)},
-            {name: '香港', value: virus(17)},
-            {name: '澳门', value: virus(10)}
-        ];
         var datavirus=[
             {name:"南海诸岛",value: 0},
-            {name: '北京', value: 228},
-            {name: '天津', value: 66},
-            {name: '上海', value: 219},
-            {name: '重庆', value: 344},
-            {name: '河北', value: 126},
-            {name: '河南', value: 675},
-            {name: '云南', value: 119},
-            {name: '辽宁', value: 77},
-            {name: '黑龙江', value: 155},
-            {name: '湖南', value: 593},
-            {name: '安徽', value: 480},
-            {name: '山东', value: 275},
-            {name: '新疆', value: 29},
-            {name: '江苏', value: 308},
-            {name: '浙江', value: 829},
-            {name: '江西', value: 476},
-            {name: '湖北', value: 13522},
-            {name: '广西', value: 139},
-            {name: '甘肃', value: 55},
-            {name: '山西', value: 74},
-            {name: '内蒙古', value: 35},
-            {name: '陕西', value: 142},
-            {name: '吉林', value: 42},
-            {name: '福建', value: 194},
-            {name: '贵州', value: 56},
-            {name: '广东', value: 32},
-            {name: '青海', value: 15},
-            {name: '西藏', value: 1},
-            {name: '四川', value: 282},
-            {name: '宁夏', value: 34},
-            {name: '海南', value: 80},
-            {name: '台湾', value: 10},
-            {name: '香港', value: 17},
-            {name: '澳门', value: 10}
+            {name: 'Beijing', value: 156},
+            {name: 'Tianjin', value: 32},
+            {name: 'Shanghai', value: 153},
+            {name: 'Chongqin', value: 238},
+            {name: 'Hebei', value: 96},
+            {name: 'Henan', value: 422},
+            {name: 'Yunnan', value: 91},
+            {name: 'Liaoning', value: 60},
+            {name: 'Heilongjiang', value: 80},
+            {name: 'Hunan', value: 389},
+            {name: 'Anhui', value: 297},
+            {name: 'Shandong', value: 202},
+            {name: 'Xinjiang', value: 18},
+            {name: 'Jiangsu', value: 202},
+            {name: 'Zhejiang', value: 599},
+            {name: 'Jiangxi', value: 286},
+            {name: 'Hubei', value: 7153},
+            {name: 'Guangxi', value: 100},
+            {name: 'Gansu', value: 35},
+            {name: 'Shanxi', value: 47},
+            {name: 'Inner Mongolia', value: 23},
+            {name: 'Shaanxi', value: 101},
+            {name: 'Jilin', value: 17},
+            {name: 'Fujian', value: 144},
+            {name: 'Guizhou', value: 29},
+            {name: 'Guangdong', value: 520},
+            {name: 'Qinghai', value: 9},
+            {name: 'Tibet', value: 1},
+            {name: 'Sichuan', value: 207},
+            {name: 'Ningxia', value: 26},
+            {name: 'Hainan', value: 57},
+            {name: 'Taiwan', value: 10},
+            {name: 'Hongkong', value: 12},
+            {name: 'Macao', value: 7}
         ];
         var myChart = echarts.init(document.getElementById('main'));
         function randomValue() {
@@ -205,14 +168,25 @@
                 return 4;
         }
         option = {
-            backgroundColor: '#404a59',
+            backgroundColor: 'white',
             title:  {
                 text: '新型冠状病毒全国分布图',
                 x: 'center',
                 textStyle: {//主标题文本样式{"fontSize": 18,"fontWeight": "bolder","color": "#333"}
                     fontSize:28,
-                    color: '#fff'
+                    color: '#000000'
                 },
+            },
+            toolbox: {
+                show: true,
+　　             feature: {
+                    saveAsImage: {
+                        show:true,
+                        excludeComponents :['toolbox'],
+                    pixelRatio: 2
+                    }
+　　              }
+
             },
             tooltip: {
                 formatter:function(params,ticket, callback){
@@ -238,7 +212,7 @@
                     {gte: 1, lte: 9},       // (10, 200]
                 ],
                 textStyle: {
-                    color: '#fff'
+                    color: '#000000'
                 },
                 align: 'auto',
                 type: 'piecewise',    //是否连续

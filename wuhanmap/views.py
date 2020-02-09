@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import JsonResponse
 
 
+def china_wuhan_static(request):
+    return render(request, 'china-wuhan-static.html')
+
+
 def china_wuhan(request):
     import requests
     from bs4 import BeautifulSoup
@@ -48,9 +52,8 @@ def china_wuhan(request):
                  '广东','青海','西藏', '四川','宁夏','海南',
                  '台湾','香港','澳门'
                  ]
-
     context = {
-        # 'protocols': protocols,
+        'protocols': protocols,
         'data': data
     }
     return render(request, 'china-wuhan.html', context=context)
