@@ -115,7 +115,7 @@
     </div>
     <script type="text/javascript">
         var datavirus=[
-            {name:"南海诸岛",value: 0},
+            {#{name:"南海诸岛ddddd",value: 0},#}
             {name: 'Beijing', value: 156},
             {name: 'Tianjin', value: 32},
             {name: 'Shanghai', value: 153},
@@ -170,7 +170,7 @@
         option = {
             backgroundColor: 'white',
             title:  {
-                text: '新型冠状病毒全国分布图',
+                {#text: '新型冠状病毒全国分布图',#}
                 x: 'center',
                 textStyle: {//主标题文本样式{"fontSize": 18,"fontWeight": "bolder","color": "#333"}
                     fontSize:28,
@@ -206,10 +206,11 @@
                 min: 0,
                 max: 10000,
                 pieces: [
-                    {gte: 1000},            // (1500, Infinity]
-                    {gte: 100, lte: 999},  // (310, 1000]
-                    {gte: 10, lte: 99},   // (200, 300]
-                    {gte: 1, lte: 9},       // (10, 200]
+                    {gte: 1, lte: 9},
+                    {gte: 10, lte: 99},
+                    {gte: 100, lte: 499},
+                    {gte: 500, lte: 999},
+                    {gte: 1000},
                 ],
                 textStyle: {
                     color: '#000000'
@@ -218,7 +219,7 @@
                 type: 'piecewise',    //是否连续
                 left: 'left',
                 top: 'bottom',
-                text: ['高','低'],    //取值范围的文字
+                {#text: ['高','低'],    //取值范围的文字#}
                 inRange: {
                     color: ['#fcffde','#f0a23f','#dd3f37','#742B33',],
                 },
